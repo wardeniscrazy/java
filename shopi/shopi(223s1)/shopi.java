@@ -1,5 +1,4 @@
 
-dfrd
 import java.util.*;
 
 public class shopi2 {
