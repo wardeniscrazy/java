@@ -1,0 +1,88 @@
+🎮 WARDEN BANK - TO DO LIST
+
+📦 Setup
+[✅] Create WardenBank.java
+[✅] Create main() method
+[✅] Create Scanner
+[✅] Create balance variable
+[✅] Create history ArrayList
+
+🖥️ Menu System
+[✅] Print bank title
+[✅] Print menu options
+[✅] Take user choice
+[✅] Repeat menu using loop
+[✅] Exit option
+
+💰 Deposit System
+[✅] Add Deposit menu option
+[✅] Ask deposit amount
+[✅] Add amount to balance
+[✅] Show success message
+[❌] Add transaction to history
+
+💸 Withdraw System
+[✅] Add Withdraw menu option
+[✅] Ask withdrawal amount
+[✅] Check sufficient balance
+[✅] Deduct amount
+[✅] Check sufficient balance
+[✅] Show success message
+[✅] Show insufficient balance message
+[❌] Add transaction to history
+
+🏦 Balance System
+[✅] Add Check Balance option
+[✅] Display current balance
+
+📝 Transaction History
+[ ] Add History menu option
+[ ] Loop through transactions
+[ ] Display all transactions
+[ ] Handle empty history
+
+💾 Save System
+[ ] Create saveData() method
+[ ] Create/open save file
+[ ] Save balance
+[ ] Save history
+[ ] Close file
+[ ] Show save success message
+
+📂 Load System
+[ ] Create loadData() method
+[ ] Check if file exists
+[ ] Read balance
+[ ] Read transaction history
+[ ] Restore values
+[ ] Handle missing file
+
+🚀 Auto Load
+[ ] Call loadData() when program starts
+[ ] Verify saved data loads correctly
+
+🔐 Bonus Features
+[ ] PIN system
+[ ] Change PIN
+[ ] Interest system
+[ ] Transfer money
+[ ] Account holder name
+[ ] Account number
+
+🏆 Final Testing
+[ ] Deposit works
+[ ] Withdraw works
+[ ] Balance updates correctly
+[ ] History records correctly
+[ ] Save works
+[ ] Load works
+[ ] No crashes on invalid input
+[ ] Exit works correctly
+
+🎯 First Goal
+[ ] Create balance variable
+[ ] Create menu
+[ ] Deposit money
+[ ] Withdraw money
+[ ] Check balance
+[ ] Exit
