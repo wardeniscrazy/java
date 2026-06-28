@@ -5,8 +5,8 @@ import java.awt.*;
 public class snakey extends JPanel {
 
   Image background = new ImageIcon(
-      "C:\\Users\\GAURAV TIWARY\\application\\vs data\\projects\\scr\\mountain-peaks-beautiful-scenery.jpg").getImage();
-  Image tile = new ImageIcon("C:\\Users\\GAURAV TIWARY\\application\\vs data\\projects\\scr\\Background.png")
+      "C:\\Users\\#############\\application\\vs data\\projects\\scr\\mountain-peaks-beautiful-scenery.jpg").getImage();
+  Image tile = new ImageIcon("C:\\Users\\#############\\application\\vs data\\projects\\scr\\Background.png")
       .getImage();
 
   int tileSize = 32;
