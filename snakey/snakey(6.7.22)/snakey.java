@@ -7,13 +7,13 @@ public class snakey extends JPanel {
 
   // Images
   Image background = new ImageIcon(
-      "C:\\Users\\GAURAV TIWARY\\application\\vs data\\projects\\scr\\mountain-peaks-beautiful-scenery.jpg").getImage();
+      "C:\\Users\\#############\\application\\vs data\\projects\\scr\\mountain-peaks-beautiful-scenery.jpg").getImage();
 
   Image tile = new ImageIcon(
-      "C:\\Users\\GAURAV TIWARY\\application\\vs data\\projects\\scr\\Background.png").getImage();
+      "C:\\Users\\#############\\application\\vs data\\projects\\scr\\Background.png").getImage();
 
   Image head = new ImageIcon(
-      "C:\\Users\\GAURAV TIWARY\\application\\vs data\\projects\\scr\\head.png").getImage();
+      "C:\\Users\\#############\\application\\vs data\\projects\\scr\\head.png").getImage();
 
   // Game settings
   int tileSize = 32;
