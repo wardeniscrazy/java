@@ -86,7 +86,7 @@ public class bricky extends JPanel implements KeyListener {
     frame.setLocationRelativeTo(null);
     frame.setVisible(true);
     System.out.println("Game started. Use the left and right arrow keys to move the paddle.");
-
+System.out.println("hi");
     // Give keyboard focus
     game.requestFocus();
   }
