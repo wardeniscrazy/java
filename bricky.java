@@ -87,6 +87,7 @@ public class bricky extends JPanel implements KeyListener {
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.setLocationRelativeTo(null);
     frame.setVisible(true);
+    System.out.println("hi");
   
     // Give keyboard focus
     game.requestFocus();
