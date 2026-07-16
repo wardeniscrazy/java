@@ -1,5 +1,4 @@
 
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -7,8 +6,8 @@ import java.awt.event.*;
 public class bricky extends JPanel implements KeyListener {
 
   // Images
-  Image background = new ImageIcon("background.jpg").getImage();
-  Image paddle = new ImageIcon("paddle.png").getImage();
+  Image background = new ImageIcon("java\\press me\\background.jpg").getImage();
+  Image paddle = new ImageIcon("java\\press me\\paddle.png").getImage();
   Image ball = new ImageIcon("ball.png").getImage();
 
   // Window size
@@ -88,7 +87,7 @@ public class bricky extends JPanel implements KeyListener {
     frame.setLocationRelativeTo(null);
     frame.setVisible(true);
     System.out.println("hi");
-  
+
     // Give keyboard focus
     game.requestFocus();
   }
