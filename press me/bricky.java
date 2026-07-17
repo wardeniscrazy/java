@@ -1,34 +1,27 @@
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
 public class bricky extends JPanel implements KeyListener {
 
-  // ==========================
-  // Window Settings
-  // ==========================
-  private static final int WIDTH = 960;
-  private static final int HEIGHT = 800;
-
-  // ==========================
   // Images
-  // ==========================
-  private final Image background = new ImageIcon("java/press me/background.jpg").getImage();
-  private final Image paddle = new ImageIcon("java/press me/paddle.png").getImage();
-  private final Image ball = new ImageIcon("java/press me/ball.png").getImage();
+  Image background = new ImageIcon("java\\press me\\background.jpg").getImage();
+  Image paddle = new ImageIcon("java\\press me\\paddle.png").getImage();
+  Image ball = new ImageIcon("ball.png").getImage();
 
-  // ==========================
+  // Window size
+  final int WIDTH = 960;
+  final int HEIGHT = 800;
+
   // Paddle
-  // ==========================
-  private final int paddleWidth = 90;
-  private final int paddleHeight = 80;
-  private final int paddleSpeed = 12;
+  int paddleWidth = 90;
+  int paddleHeight = 80;
 
-  private int paddleX = (WIDTH - paddleWidth) / 2;
-  private final int paddleY = 700;
+  int paddleX = (WIDTH - paddleWidth) / 2;
+  int paddleY = 700;
 
   public bricky() {
-    setPreferredSize(new Dimension(WIDTH, HEIGHT));
     setFocusable(true);
     addKeyListener(this);
   }
@@ -37,32 +30,38 @@ public class bricky extends JPanel implements KeyListener {
   protected void paintComponent(Graphics g) {
     super.paintComponent(g);
 
-    // Draw Background
-    g.drawImage(background, 0, 0, getWidth(), getHeight(), this);
+    // Background
+    g.drawImage(background, 0, 0, WIDTH, HEIGHT, this);
 
-    // Draw Paddle
+    // Paddle
     g.drawImage(paddle, paddleX, paddleY, paddleWidth, paddleHeight, this);
-
-    // Draw Ball (currently centered)
-    g.drawImage(ball, WIDTH / 2 - 15, HEIGHT / 2 - 15, 30, 30, this);
   }
 
   @Override
   public void keyPressed(KeyEvent e) {
 
-    switch (e.getKeyCode()) {
+    // Move Left
+    if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+      if (paddleX > 0) {
+        paddleX -= 10;
+      }
+    }
 
-      case KeyEvent.VK_LEFT:
-        paddleX -= paddleSpeed;
-        break;
-
-      case KeyEvent.VK_RIGHT:
-        paddleX += paddleSpeed;
-        break;
+    // Move Right
+    if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+      if (paddleX < WIDTH - paddleWidth) {
+        paddleX += 10;
+      }
     }
 
     // Keep paddle inside the window
-    paddleX = Math.max(0, Math.min(paddleX, getWidth() - paddleWidth));
+    if (paddleX < 0) {
+      paddleX = 0;
+    }
+
+    if (paddleX > getWidth() - paddleWidth) {
+      paddleX = getWidth() - paddleWidth;
+    }
 
     repaint();
   }
@@ -77,20 +76,19 @@ public class bricky extends JPanel implements KeyListener {
 
   public static void main(String[] args) {
 
-    SwingUtilities.invokeLater(() -> {
+    JFrame frame = new JFrame("Breakout");
 
-      JFrame frame = new JFrame("Breakout");
+    bricky game = new bricky();
 
-      bricky game = new bricky();
+    frame.add(game);
+    frame.setSize(game.WIDTH, game.HEIGHT);
+    frame.setResizable(true);
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setLocationRelativeTo(null);
+    frame.setVisible(true);
+    System.out.println("hi");
 
-      frame.add(game);
-      frame.pack();
-      frame.setResizable(true);
-      frame.setLocationRelativeTo(null);
-      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      frame.setVisible(true);
-
-      game.requestFocusInWindow();
-    });
+    // Give keyboard focus
+    game.requestFocus();
   }
 }
