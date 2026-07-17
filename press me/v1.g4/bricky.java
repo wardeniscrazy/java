@@ -13,7 +13,7 @@ public class bricky extends JPanel implements KeyListener {
   // ==========================
   // Images
   // ==========================
-  private final Image background = new ImageIcon("press me\\background.jpg").getImage();
+  private final Image background = new ImageIcon("PRESS ME\\press me\\background.jpg").getImage();
   private final Image paddle = new ImageIcon("press me\\paddle.png").getImage();
   private final Image ball = new ImageIcon("press me\\ball.png").getImage();
 
