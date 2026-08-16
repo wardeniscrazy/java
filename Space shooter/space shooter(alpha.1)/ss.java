@@ -6,5 +6,4 @@ sss
 ddd
 ffffd
 cvvc
-dfcd
-hheisuakama
+dfc
